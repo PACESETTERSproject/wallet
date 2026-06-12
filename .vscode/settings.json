@@ -1,4 +1,4 @@
 {
 	"java.configuration.updateBuildConfiguration": "interactive",
-	"html.customData": ["./node_modules/@didroom/components/dist/vscode-data.json"]
+	"html.customData": ["./node_modules/@pacesetters/components/dist/vscode-data.json"]
 }
