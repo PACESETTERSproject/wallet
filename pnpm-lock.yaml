@@ -164,9 +164,6 @@ importers:
       '@capacitor/cli':
         specifier: ^7.0.1
         version: 7.6.6
-      '@didroom/components':
-        specifier: ^1.33.0
-        version: 1.33.5(@capacitor/core@7.6.6)(tailwindcss@3.4.19)
       '@eslint/eslintrc':
         specifier: ^3.2.0
         version: 3.3.5
@@ -182,6 +179,9 @@ importers:
       '@lottiefiles/svelte-lottie-player':
         specifier: ^0.3.1
         version: 0.3.1
+      '@pacesetters/components':
+        specifier: link:../pacesetters-components
+        version: link:../pacesetters-components
       '@playwright/test':
         specifier: ^1.49.0
         version: 1.60.0
@@ -238,7 +238,7 @@ importers:
         version: 9.1.2(eslint@9.39.4(jiti@1.21.7))
       eslint-plugin-localization:
         specifier: file:plugins/localization
-        version: file:plugins/localization
+        version: localization@file:plugins/localization
       eslint-plugin-svelte:
         specifier: ^2.46.1
         version: 2.46.1(eslint@9.39.4(jiti@1.21.7))(svelte@5.56.1(@typescript-eslint/types@8.60.1))(ts-node@10.9.2(@types/node@25.9.1)(typescript@5.9.3))
@@ -869,11 +869,6 @@ packages:
     engines: {node: '>=20.0.0'}
     hasBin: true
 
-  '@capacitor/clipboard@6.0.3':
-    resolution: {integrity: sha512-7lUyN2WZE3qPJw5ybvs2PGODOsmiIAjFDkZ1aokSDcWSUgtvdpu7KqMqXs5S+dhfJDU1/oVAtpww5W5cBUzY0g==}
-    peerDependencies:
-      '@capacitor/core': ^6.0.0
-
   '@capacitor/clipboard@7.0.4':
     resolution: {integrity: sha512-+kiTRFjwD5UiWRg/m1JA/0Z0DDdsZLa25MLqI1e3MUi3yNZIwVZV5Oj6v4O0gxmpoBxf5A1L1v3weq+vWOBUuQ==}
     peerDependencies:
@@ -967,9 +962,6 @@ packages:
   '@cspotcode/source-map-support@0.8.1':
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
     engines: {node: '>=12'}
-
-  '@didroom/components@1.33.5':
-    resolution: {integrity: sha512-y0aiKcqLqdvvPhemFL1den3SAKS5INWRMv1AuLY8oo3FS3pRaMJVPSemXdSugcxHZuJFszElx8WC80pYMI7TLQ==}
 
   '@digitalbazaar/http-client@4.3.0':
     resolution: {integrity: sha512-6lMpxpt9BOmqHKGs9Xm6DP4LlZTBFer/ZjHvP3FcW3IaUWYIWC7dw5RFZnvw4fP57kAVcm1dp3IF+Y50qhBvAw==}
@@ -2092,11 +2084,6 @@ packages:
       svelte: ^5.0.0
       vite: ^6.0.0
 
-  '@tailwindcss/line-clamp@0.4.4':
-    resolution: {integrity: sha512-5U6SY5z8N42VtrCrKlsTAA35gy2VSyYtHWCsg1H87NU1SXnEfekTVlrga9fzUDrrHcGi2Lb5KenUWb4lRQT5/g==}
-    peerDependencies:
-      tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
-
   '@tootallnate/quickjs-emscripten@0.23.0':
     resolution: {integrity: sha512-C5Mc6rdnsaJDjO3UpGW/CQTHtCKaYlScZTly4JIu97Jxo/odCiH0ITnDXSJPTOrEKk/ycSZ0AOgTmkDtkOsvIA==}
 
@@ -2394,11 +2381,6 @@ packages:
   ansi-styles@4.3.0:
     resolution: {integrity: sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==}
     engines: {node: '>=8'}
-
-  ansi-to-html@0.7.2:
-    resolution: {integrity: sha512-v6MqmEpNlxF+POuyhKkidusCHWWkaLcGRURzivcU3I9tv7k4JVhFcnukrM5Rlk2rUywdZuzYAZ+kbZqWCnfN3g==}
-    engines: {node: '>=8.0.0'}
-    hasBin: true
 
   any-promise@1.3.0:
     resolution: {integrity: sha512-7UvmKalWRt1wgjL1RrGxoSJW/0QZFIegpeGvZG9kjp8vrRu55XTHbwnqq2GpXm9uLbcuhxm3IqX9OB4MZR1b2A==}
@@ -3112,9 +3094,6 @@ packages:
   dezalgo@1.0.4:
     resolution: {integrity: sha512-rXSP0bf+5n0Qonsb+SVVfNfIsimO4HEtmnIpPHY8Q1UCzKlQrDMfdobr8nJOOsRgWCyMRqeSBQzmWUMq7zvVig==}
 
-  did-resolver@4.1.0:
-    resolution: {integrity: sha512-S6fWHvCXkZg2IhS4RcVHxwuyVejPR7c+a4Go0xbQ9ps5kILa8viiYQgrM4gfTyeTjJ0ekgJH9gk/BawTpmkbZA==}
-
   didyoumean@1.2.2:
     resolution: {integrity: sha512-gxtyfqMg7GKyhQmb056K7M3xszy/myH8w+B4RT+QXBQsvAOdc3XymqDDPHx1BgPgsdAA5SIifona89YtRATDzw==}
 
@@ -3269,9 +3248,6 @@ packages:
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
-
-  eslint-plugin-localization@file:plugins/localization:
-    resolution: {directory: plugins/localization, type: directory}
 
   eslint-plugin-svelte@2.46.1:
     resolution: {integrity: sha512-7xYr2o4NID/f9OEYMqxsEQsCsj4KaMy4q5sANaKkAb6/QeCjYFxRmDm2S3YC3A3pl1kyPZ/syOx/i7LcWYSbIw==}
@@ -4223,6 +4199,9 @@ packages:
     resolution: {integrity: sha512-Kx8hMakjX03tiGTLAIdJ+lL0htKnXjEZN6hk/tozf/WOuYGdZBJrZ+rCJRbVCugsjB3jMLn9746NsQIf5VjBMw==}
     engines: {node: '>=4'}
 
+  localization@file:plugins/localization:
+    resolution: {directory: plugins/localization, type: directory}
+
   locate-character@3.0.0:
     resolution: {integrity: sha512-SW13ws7BjaeJ6p7Q6CO2nchbYEc3X3J6WrmTTDto7yMPqVSZTUyY5Tjbid+Ab8gLnATtygYtiDIJGQRRn2ZOiA==}
 
@@ -5136,7 +5115,6 @@ packages:
     engines: {node: '>=0.6.0', teleport: '>=0.2.0'}
     deprecated: |-
       You or someone you depend on is using Q, the JavaScript Promise library that gave JavaScript developers strong feelings about promises. They can almost certainly migrate to the native JavaScript promise now. Thank you literally everyone for joining me in this bet against the odds. Be excellent to each other.
-
       (For a CapTP with native promises, see @endo/eventual-send and @endo/captp)
 
   qs@6.15.2:
@@ -7194,10 +7172,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@capacitor/clipboard@6.0.3(@capacitor/core@7.6.6)':
-    dependencies:
-      '@capacitor/core': 7.6.6
-
   '@capacitor/clipboard@7.0.4(@capacitor/core@7.6.6)':
     dependencies:
       '@capacitor/core': 7.6.6
@@ -7282,17 +7256,6 @@ snapshots:
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
       '@jridgewell/trace-mapping': 0.3.9
-
-  '@didroom/components@1.33.5(@capacitor/core@7.6.6)(tailwindcss@3.4.19)':
-    dependencies:
-      '@capacitor/clipboard': 6.0.3(@capacitor/core@7.6.6)
-      '@stencil/core': 4.43.5
-      '@tailwindcss/line-clamp': 0.4.4(tailwindcss@3.4.19)
-      ansi-to-html: 0.7.2
-      did-resolver: 4.1.0
-    transitivePeerDependencies:
-      - '@capacitor/core'
-      - tailwindcss
 
   '@digitalbazaar/http-client@4.3.0':
     dependencies:
@@ -8771,10 +8734,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@tailwindcss/line-clamp@0.4.4(tailwindcss@3.4.19)':
-    dependencies:
-      tailwindcss: 3.4.19
-
   '@tootallnate/quickjs-emscripten@0.23.0': {}
 
   '@trapezedev/gradle-parse@7.1.3': {}
@@ -9139,10 +9098,6 @@ snapshots:
   ansi-styles@4.3.0:
     dependencies:
       color-convert: 2.0.1
-
-  ansi-to-html@0.7.2:
-    dependencies:
-      entities: 2.2.0
 
   any-promise@1.3.0: {}
 
@@ -9841,8 +9796,6 @@ snapshots:
       asap: 2.0.6
       wrappy: 1.0.2
 
-  did-resolver@4.1.0: {}
-
   didyoumean@1.2.2: {}
 
   diff3@0.0.4: {}
@@ -10065,8 +10018,6 @@ snapshots:
   eslint-config-prettier@9.1.2(eslint@9.39.4(jiti@1.21.7)):
     dependencies:
       eslint: 9.39.4(jiti@1.21.7)
-
-  eslint-plugin-localization@file:plugins/localization: {}
 
   eslint-plugin-svelte@2.46.1(eslint@9.39.4(jiti@1.21.7))(svelte@5.56.1(@typescript-eslint/types@8.60.1))(ts-node@10.9.2(@types/node@25.9.1)(typescript@5.9.3)):
     dependencies:
@@ -11077,6 +11028,8 @@ snapshots:
       parse-json: 4.0.0
       pify: 3.0.0
       strip-bom: 3.0.0
+
+  localization@file:plugins/localization: {}
 
   locate-character@3.0.0: {}
 

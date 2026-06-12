@@ -128,14 +128,8 @@
 		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, user-scalable=no"
 	/>
 	<!-- uncomment to test didroom-components locally -->
-	<!-- <script 
-	 	type="module" 
-	 	src="http://localhost:3333/build/didroom-components.esm.js" 
-	 ></script> 
-	 <link 
-	 	rel="stylesheet" 
-	 	href="http://localhost:3333/build/didroom-components.css" 
-	 />  -->
+	<!-- <script type="module" src="http://localhost:3333/build/didroom-components.esm.js"></script>
+	<link rel="stylesheet" href="http://localhost:3333/build/didroom-components.css" /> -->
 	<script type="module" src="/components/didroom-components/didroom-components.esm.js"></script>
 	<link rel="stylesheet" href="/components/didroom-components/didroom-components.css" />
 	<title>{m.DidroomWallet()}</title>
