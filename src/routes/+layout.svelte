@@ -111,8 +111,8 @@
 				pendingDeepLink.set(data.url);
 				await goto('/unlock');
 			}
-			if (data.url.includes('didroom-wallet')) {
-				const path = data.url.split('didroom-wallet://')[1];
+			if (data.url.includes('pacesetters-wallet')) {
+				const path = data.url.split('pacesetters-wallet://')[1];
 				await goto(path);
 			}
 		});
@@ -128,17 +128,11 @@
 		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, user-scalable=no"
 	/>
 	<!-- uncomment to test didroom-components locally -->
-	<!-- <script 
-	 	type="module" 
-	 	src="http://localhost:3333/build/didroom-components.esm.js" 
-	 ></script> 
-	 <link 
-	 	rel="stylesheet" 
-	 	href="http://localhost:3333/build/didroom-components.css" 
-	 />  -->
+	<!-- <script type="module" src="http://localhost:3333/build/didroom-components.esm.js"></script>
+	<link rel="stylesheet" href="http://localhost:3333/build/didroom-components.css" /> -->
 	<script type="module" src="/components/didroom-components/didroom-components.esm.js"></script>
 	<link rel="stylesheet" href="/components/didroom-components/didroom-components.css" />
-	<title>{m.DidroomWallet()}</title>
+	<title>{m.PacesettersWallet()}</title>
 </svelte:head>
 <svelte:window
 	onerror={(e) => log((e as unknown as ErrorEvent).error)}

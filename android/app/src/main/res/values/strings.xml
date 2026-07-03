@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">DIDroom Wallet</string>
-    <string name="title_activity_main">DIDroom Wallet</string>
-    <string name="package_name">com.didroom.wallet</string>
+    <string name="app_name">Pacesetters Wallet</string>
+    <string name="title_activity_main">Pacesetters Wallet</string>
+    <string name="package_name">com.pacesetters.wallet</string>
 </resources>

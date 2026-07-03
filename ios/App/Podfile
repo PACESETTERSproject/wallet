@@ -28,7 +28,7 @@ def capacitor_pods
   pod 'CapacitorNativeSettings', :path => '../../node_modules/.pnpm/capacitor-native-settings@6.0.6_@capacitor+core@7.4.3/node_modules/capacitor-native-settings'
 end
 
-target 'Didroom' do
+target 'Pacesetters' do
   capacitor_pods
   # Add your Pods here
 end
