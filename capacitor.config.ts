@@ -2,8 +2,8 @@ import { CapacitorConfig } from '@capacitor/cli';
 
 let config: CapacitorConfig;
 const defaultConfig: CapacitorConfig = {
-	appId: 'com.didroom.wallet',
-	appName: 'DIDroom',
+	appId: 'com.pacesetters.wallet',
+	appName: 'Pacesetters Wallet',
 	webDir: 'build',
 	server: {
 		androidScheme: 'http',
@@ -15,7 +15,7 @@ const defaultConfig: CapacitorConfig = {
 		}
 	},
 	ios: {
-		scheme: 'Didroom',
+		scheme: 'Pacesetters',
 		webContentsDebuggingEnabled: true
 	}
 };

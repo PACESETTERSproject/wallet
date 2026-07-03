@@ -1,10 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
-    namespace "com.didroom.wallet"
+    namespace "com.pacesetters.wallet"
     compileSdk rootProject.ext.compileSdkVersion
     defaultConfig {
-        applicationId "com.didroom.wallet"
+        applicationId "com.pacesetters.wallet"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

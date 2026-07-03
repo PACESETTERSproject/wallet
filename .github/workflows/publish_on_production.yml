@@ -20,7 +20,7 @@ jobs:
     with:
       backend-url: ${{ vars.PUBLIC_BACKEND_URL }}
       lane: production
-      package-name: com.didroom.wallet
+      package-name: com.pacesetters.wallet
     secrets:
       keystore-file: ${{ secrets.BUNDLE_BETA_PLAYSTORE }}
       service-account: ${{ secrets.PLAYSTORE_SERVICE_ACCOUNT }}

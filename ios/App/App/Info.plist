@@ -15,7 +15,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>Didroom</string>
+	<string>Pacesetters Wallet</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -59,7 +59,7 @@
 			<array>
 				<string>didroom4vp</string>
 				<string>openid-credential-offer</string>
-				<string>didroom-wallet</string>
+				<string>pacesetters-wallet</string>
 				<string>openid4vp</string>
 			</array>
 		</dict>
