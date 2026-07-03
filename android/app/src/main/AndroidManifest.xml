@@ -32,7 +32,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data android:scheme="openid-credential-offer" />
-                <data android:scheme="didroom-wallet" />
+                <data android:scheme="pacesetters-wallet" />
             </intent-filter>
         </activity>
         <provider

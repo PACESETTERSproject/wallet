@@ -12,7 +12,7 @@ jobs:
       user-email: ${{ vars.USER_EMAIL }}
       user-password: ${{ vars.USER_PASSWORD }}
       user-seed: ${{ vars.USER_SEED }}
-      package-name: com.didroom.wallet
+      package-name: com.pacesetters.wallet
 
   distribute:
     uses: ForkbombEu/ship-capacitor-apps/.github/workflows/ship_android.yml@main

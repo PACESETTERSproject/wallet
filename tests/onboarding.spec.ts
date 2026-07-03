@@ -4,7 +4,7 @@ import { swipe } from './utils';
 test.describe('Onboarding Page', () => {
 	test('should display all onboarding slides', async ({ page }) => {
 		await page.goto('/');
-		await expect(page.locator('text="DIDroom Wallet,"')).toBeVisible();
+		await expect(page.locator('text="Pacesetters Wallet,"')).toBeVisible();
 		await swipe(page);
 		await expect(page.locator('text="Create your DID,"')).toBeVisible();
 		await swipe(page);

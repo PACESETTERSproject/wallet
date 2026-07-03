@@ -1,4 +1,4 @@
-package com.didroom.wallet;
+package com.pacesetters.wallet;
 
 import android.os.Bundle;
 
