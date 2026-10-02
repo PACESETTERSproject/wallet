@@ -64,6 +64,7 @@ jobs:
         with:
           submodules: true
           node-version: '22'
+          pnpm-version: '11'
       - name: Tag release
         id: tag_release
         env:

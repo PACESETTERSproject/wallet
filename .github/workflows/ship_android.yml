@@ -1,5 +1,9 @@
 name: 🖋️🚢 sign and ship Android
 
+# Local copy of ForkbombEu/ship-capacitor-apps ship_android.yml (17e332c) plus a
+# `pnpm-version` input, needed because this repo uses pnpm 11. Drop it and point
+# callers back upstream once that input lands there.
+
 on:
   workflow_call:
     inputs:
@@ -9,6 +13,13 @@ on:
       lane:
         required: true
         type: string
+      package-name:
+        required: false
+        type: string
+      pnpm-version:
+        required: false
+        type: string
+        default: '9'
     secrets:
       keystore-file:
         required: true
@@ -30,7 +41,8 @@ jobs:
       - uses: dyne/pnpm@main
         with:
           submodules: true
-          node-version: '20.11.1'
+          node-version: '22'
+          pnpm-version: ${{ inputs.pnpm-version }}
       - uses: actions/cache@v4
         with:
           path: |
@@ -43,7 +55,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: zulu
-          java-version: '17'
+          java-version: '21'
       - name: Decode Keystore File
         uses: timheuer/base64-to-file@v1
         id: keystore
@@ -56,6 +68,24 @@ jobs:
         with:
           fileName: service-account.json
           encodedString: ${{ secrets.service-account }}
+      - name: Checkout Fastfile and Dependencies
+        uses: actions/checkout@v4
+        with:
+          repository: ForkbombEu/ship-capacitor-apps
+          path: fastlane_temp
+          sparse-checkout: |
+            fastlane/Fastfile
+            fastlane/Pluginfile
+            ./Gemfile.lock
+            ./Gemfile
+
+      - name: Move Fastlane files
+        run: |
+          mv fastlane_temp/fastlane/Fastfile fastlane/
+          mv fastlane_temp/fastlane/Pluginfile fastlane/
+          mv fastlane_temp/Gemfile.lock ./
+          mv fastlane_temp/Gemfile ./
+          rm -rf fastlane_temp
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.0'
@@ -71,6 +101,11 @@ jobs:
           PULL_REQUEST_NUMBER: ${{ github.event.number }}
           PULL_REQUEST_TITLE: ${{ github.event.pull_request.title }}
           FIREBASE_APP_ID: ${{ secrets.firebase-app-id }}
-
+          PACKAGE_NAME: ${{ inputs.package-name }}
         with:
           lane: ${{ inputs.lane }}
+      - name: upload binary artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          path: |
+            release.apk
