@@ -181,8 +181,8 @@ importers:
         specifier: ^0.3.1
         version: 0.3.1
       '@pacesetters/components':
-        specifier: link:../pacesetters-components
-        version: link:../pacesetters-components
+        specifier: https://github.com/PACESETTERSproject/components/releases/download/v1.34.0/pacesetters-components-1.34.0.tgz
+        version: https://github.com/PACESETTERSproject/components/releases/download/v1.34.0/pacesetters-components-1.34.0.tgz(@capacitor/core@7.6.9)(tailwindcss@3.4.19)
       '@playwright/test':
         specifier: ^1.63.0
         version: 1.63.0
@@ -869,6 +869,11 @@ packages:
     resolution: {integrity: sha512-QBDEf38yBAFTJehbi5FvAmhDWV1I/e7Zr3Z6XX0Bj+9T+/OY5EkGbw5/1e+3oIyyeepq3WtdSkLWHs3VNH2gCA==}
     engines: {node: '>=20.0.0'}
     hasBin: true
+
+  '@capacitor/clipboard@6.0.3':
+    resolution: {integrity: sha512-7lUyN2WZE3qPJw5ybvs2PGODOsmiIAjFDkZ1aokSDcWSUgtvdpu7KqMqXs5S+dhfJDU1/oVAtpww5W5cBUzY0g==}
+    peerDependencies:
+      '@capacitor/core': ^6.0.0
 
   '@capacitor/clipboard@7.0.4':
     resolution: {integrity: sha512-+kiTRFjwD5UiWRg/m1JA/0Z0DDdsZLa25MLqI1e3MUi3yNZIwVZV5Oj6v4O0gxmpoBxf5A1L1v3weq+vWOBUuQ==}
@@ -1794,6 +1799,10 @@ packages:
     resolution: {integrity: sha512-exj1MzVXoP7xnAcAB3jZ97pTvVPkQF9y6GA/dvYC47HV7vLv+24XRS6b/v/XnyikpEuvMhugEXdGtAlU086WkQ==}
     engines: {node: '>= 18'}
 
+  '@pacesetters/components@https://github.com/PACESETTERSproject/components/releases/download/v1.34.0/pacesetters-components-1.34.0.tgz':
+    resolution: {integrity: sha512-Ygy3lIj9xK45ezufTVZAx3MKR/F+jNXUB4TGDA5klQSGzGW75yxbNd78t40NHEGcDaZqzPjsrCgTRr3kbTOXow==, tarball: https://github.com/PACESETTERSproject/components/releases/download/v1.34.0/pacesetters-components-1.34.0.tgz}
+    version: 1.34.0
+
   '@paralleldrive/cuid2@2.3.1':
     resolution: {integrity: sha512-XO7cAxhnTZl0Yggq6jOgjiOHhbgcO4NqFqwSmQpjK3b6TEE6Uj/jfSk6wzYyemh3+I0sHirKSetjQwn5cZktFw==}
 
@@ -2249,6 +2258,11 @@ packages:
       svelte: ^5.0.0
       vite: ^6.0.0
 
+  '@tailwindcss/line-clamp@0.4.4':
+    resolution: {integrity: sha512-5U6SY5z8N42VtrCrKlsTAA35gy2VSyYtHWCsg1H87NU1SXnEfekTVlrga9fzUDrrHcGi2Lb5KenUWb4lRQT5/g==}
+    peerDependencies:
+      tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
+
   '@tootallnate/quickjs-emscripten@0.23.0':
     resolution: {integrity: sha512-C5Mc6rdnsaJDjO3UpGW/CQTHtCKaYlScZTly4JIu97Jxo/odCiH0ITnDXSJPTOrEKk/ycSZ0AOgTmkDtkOsvIA==}
 
@@ -2541,6 +2555,11 @@ packages:
   ansi-styles@4.3.0:
     resolution: {integrity: sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==}
     engines: {node: '>=8'}
+
+  ansi-to-html@0.7.2:
+    resolution: {integrity: sha512-v6MqmEpNlxF+POuyhKkidusCHWWkaLcGRURzivcU3I9tv7k4JVhFcnukrM5Rlk2rUywdZuzYAZ+kbZqWCnfN3g==}
+    engines: {node: '>=8.0.0'}
+    hasBin: true
 
   any-promise@1.3.0:
     resolution: {integrity: sha512-7UvmKalWRt1wgjL1RrGxoSJW/0QZFIegpeGvZG9kjp8vrRu55XTHbwnqq2GpXm9uLbcuhxm3IqX9OB4MZR1b2A==}
@@ -3092,6 +3111,9 @@ packages:
 
   dezalgo@1.0.4:
     resolution: {integrity: sha512-rXSP0bf+5n0Qonsb+SVVfNfIsimO4HEtmnIpPHY8Q1UCzKlQrDMfdobr8nJOOsRgWCyMRqeSBQzmWUMq7zvVig==}
+
+  did-resolver@4.1.0:
+    resolution: {integrity: sha512-S6fWHvCXkZg2IhS4RcVHxwuyVejPR7c+a4Go0xbQ9ps5kILa8viiYQgrM4gfTyeTjJ0ekgJH9gk/BawTpmkbZA==}
 
   didyoumean@1.2.2:
     resolution: {integrity: sha512-gxtyfqMg7GKyhQmb056K7M3xszy/myH8w+B4RT+QXBQsvAOdc3XymqDDPHx1BgPgsdAA5SIifona89YtRATDzw==}
@@ -6888,6 +6910,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@capacitor/clipboard@6.0.3(@capacitor/core@7.6.9)':
+    dependencies:
+      '@capacitor/core': 7.6.9
+
   '@capacitor/clipboard@7.0.4(@capacitor/core@7.6.9)':
     dependencies:
       '@capacitor/core': 7.6.9
@@ -8028,6 +8054,17 @@ snapshots:
       '@octokit/webhooks-types': 7.6.1
       aggregate-error: 3.1.0
 
+  '@pacesetters/components@https://github.com/PACESETTERSproject/components/releases/download/v1.34.0/pacesetters-components-1.34.0.tgz(@capacitor/core@7.6.9)(tailwindcss@3.4.19)':
+    dependencies:
+      '@capacitor/clipboard': 6.0.3(@capacitor/core@7.6.9)
+      '@stencil/core': 4.45.1
+      '@tailwindcss/line-clamp': 0.4.4(tailwindcss@3.4.19)
+      ansi-to-html: 0.7.2
+      did-resolver: 4.1.0
+    transitivePeerDependencies:
+      - '@capacitor/core'
+      - tailwindcss
+
   '@paralleldrive/cuid2@2.3.1':
     dependencies:
       '@noble/hashes': 1.8.0
@@ -8540,6 +8577,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@tailwindcss/line-clamp@0.4.4(tailwindcss@3.4.19)':
+    dependencies:
+      tailwindcss: 3.4.19
+
   '@tootallnate/quickjs-emscripten@0.23.0': {}
 
   '@trapezedev/gradle-parse@7.1.10': {}
@@ -8893,6 +8934,10 @@ snapshots:
   ansi-styles@4.3.0:
     dependencies:
       color-convert: 2.0.1
+
+  ansi-to-html@0.7.2:
+    dependencies:
+      entities: 2.2.0
 
   any-promise@1.3.0: {}
 
@@ -9405,6 +9450,8 @@ snapshots:
     dependencies:
       asap: 2.0.6
       wrappy: 1.0.2
+
+  did-resolver@4.1.0: {}
 
   didyoumean@1.2.2: {}
 
