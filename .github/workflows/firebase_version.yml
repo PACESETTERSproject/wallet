@@ -23,6 +23,7 @@ jobs:
     with:
       backend-url: ${{ github.env.test.vars.PUBLIC_BACKEND_URL }}
       lane: distribute
+      pnpm-version: '11'
     secrets:
       keystore-file: ${{ secrets.ANDROID_KEYSTORE_FILE }}
       service-account: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
