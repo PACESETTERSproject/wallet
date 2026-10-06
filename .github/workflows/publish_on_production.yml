@@ -20,6 +20,7 @@ jobs:
     with:
       backend-url: ${{ vars.PUBLIC_BACKEND_URL }}
       lane: production
+      pnpm-version: '11'
       package-name: com.pacesetters.wallet
     secrets:
       keystore-file: ${{ secrets.BUNDLE_BETA_PLAYSTORE }}
@@ -34,6 +35,7 @@ jobs:
     with:
       backend-url: ${{ vars.PUBLIC_BACKEND_URL }}
       lane: ios production
+      pnpm-version: '11'
       DEMO_USER: ${{ github.env.ios.vars.USER_EMAIL }}
       DEMO_PASSWORD: ${{ github.env.ios.vars.USER_PASSWORD }}
       CONTACT_EMAIL: info@forkbomb.eu

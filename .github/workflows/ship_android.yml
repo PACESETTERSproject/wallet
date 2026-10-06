@@ -1,8 +1,9 @@
 name: 🖋️🚢 sign and ship Android
 
-# Local copy of ForkbombEu/ship-capacitor-apps ship_android.yml (17e332c) plus a
-# `pnpm-version` input, needed because this repo uses pnpm 11. Drop it and point
-# callers back upstream once that input lands there.
+# Local copy of ForkbombEu/ship-capacitor-apps ship_android.yml with pnpm 11
+# support. The `pnpm-version` input is upstream already; the PATH step is pending
+# in ForkbombEu/ship-capacitor-apps#6. Drop this file and point
+# firebase_version.yml back upstream once that's merged.
 
 on:
   workflow_call:
