@@ -16,15 +16,7 @@
 			await authenticate();
 			await refreshAuth();
 
-			// manage deeplinks from qrcodes
-			let urlValue: string | null = null;
-			pendingDeepLink.subscribe((value) => {
-				urlValue = value;
-			})();
-			pendingDeepLink.set(null); // clear
-			if (urlValue) {
-				return await gotoQrResult(urlValue);
-			}
+			if (await openPendingDeepLink()) return;
 
 			if (!(r('/verification') === window.location.pathname)) {
 				return await goto('/wallet');
@@ -52,10 +44,26 @@
 		}
 	}
 
+	// manage deeplinks from qrcodes: opens the link that brought the user here,
+	// with or without biometry
+	async function openPendingDeepLink(): Promise<boolean> {
+		let urlValue: string | null = null;
+		pendingDeepLink.subscribe((value) => {
+			urlValue = value;
+		})();
+		pendingDeepLink.set(null); // clear
+		if (!urlValue) return false;
+		await gotoQrResult(urlValue);
+		return true;
+	}
+
 	//
 
 	async function unlockWithoutBiometry() {
 		await refreshAuth();
+
+		if (await openPendingDeepLink()) return;
+
 		await goto('/home');
 	}
 </script>
