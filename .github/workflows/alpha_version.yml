@@ -19,6 +19,7 @@ jobs:
     with:
       backend-url: ${{ github.env.test.vars.PUBLIC_BACKEND_URL }}
       lane: alpha
+      pnpm-version: '11'
       package-name: com.pacesetters.wallet
     secrets:
       keystore-file: ${{ secrets.BUNDLE_BETA_PLAYSTORE }}
@@ -32,6 +33,7 @@ jobs:
     with:
       backend-url: ${{github.env.test.vars.PUBLIC_BACKEND_URL}}
       lane: ios testflight
+      pnpm-version: '11'
       initial-build-number: "3"
       DEMO_USER: ${{github.env.test.vars.DEMO_USER}}
       DEMO_PASSWORD: ${{github.env.test.vars.DEMO_PASSWORD}}
@@ -64,6 +66,7 @@ jobs:
         with:
           submodules: true
           node-version: '22'
+          pnpm-version: '11'
       - name: Tag release
         id: tag_release
         env:
