@@ -141,7 +141,11 @@
 <ParaglideJS {i18n}>
 	<HiddenLogsButton />
 	<ion-app class="mx-auto max-w-3xl">
-		<d-loading loading={$navigating || !isConnected}>
+		<!-- A boolean, not the navigation object: until didroom-components is
+		     registered, Svelte sets objects as properties and other values as
+		     attributes, so a cold start from a deep link would leave the
+		     navigation object on the property and the overlay up for good -->
+		<d-loading loading={!!$navigating || !isConnected}>
 			<FingerPrint />
 			{#if !isConnected}
 				<d-vertical-stack class="ion-padding" gap={8}>
